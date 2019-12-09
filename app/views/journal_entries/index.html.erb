@@ -1,4 +1,5 @@
 <h1>All Entries:</h1>
+<%= link_to "New Journal Entries", new_journal_entry_path %>
 <% @journal_entries.each do |e| %>
 <%= render "journal_entry", journal_entry: e %>
 <% end %>

@@ -1,0 +1,10 @@
+<%= form_with model: journal_entry, local: true do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <br>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+    <br>
+    <%= f.submit %>
+
+<% end %>
