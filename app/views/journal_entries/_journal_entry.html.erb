@@ -2,5 +2,7 @@
 <h3><%= journal_entry.title %></h3>
 <p><%= journal_entry.content %></p>
 <p>By: <%= journal_entry.user.username %></p>
-<%= link_to "Edit", edit_journal_entry_path(journal_entry) %>
+<% if owns_resource?(journal_entry) %>
+    <%= link_to "Edit", edit_journal_entry_path(journal_entry) %>
+<% end %>
 </div>  
