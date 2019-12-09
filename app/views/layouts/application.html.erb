@@ -11,6 +11,14 @@
   </head>
 
   <body>
+    <nav>
+      <%= navbar %>
+    </nav>
+    <% flash.each do |k, v|%>
+      <div class=<%= k %>>
+        <p><%= v %></p>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
